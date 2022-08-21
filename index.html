@@ -162,7 +162,7 @@
             <div class="row">
               <div class="col">
                 <div class="card">
-                  <h5 class="text-center my-5 text-decoration-underline">
+                  <h5 class="text-center my-4 text-decoration-underline">
                     SELECTED - V
                   </h5>
                   <ol id="selected-player-container"></ol>
@@ -170,7 +170,7 @@
               </div>
             </div>
             <!-- Budget -->
-            <div class="row mt-5">
+            <div class="row mt-4">
               <div class="col">
                 <div class="card">
                   <div class="card-body">
@@ -180,9 +180,9 @@
                       Budget
                     </h5>
                     <!-- Per Player Expense -->
-                    <div class="row d-flex align-items-center my-4">
+                    <div class="row d-flex align-items-center my-3">
                       <div class="col-4">
-                        <label for="inputPassword2">Per Player</label>
+                        <label for="inputPassword2">Per Player:</label>
                       </div>
                       <div class="col-8">
                         <input
@@ -190,13 +190,11 @@
                           id="player-expense"
                           class="form-control"
                           placeholder="Per player expense"
+                          min="0"
+                          required
                         />
                       </div>
                     </div>
-                    <!-- Player Total Expenses -->
-                    <p>
-                      Player Expenses: $<span id="player-total-expenses"></span>
-                    </p>
 
                     <!-- Calculate Button -->
                     <a
@@ -205,6 +203,59 @@
                       class="btn btn-primary d-block"
                       >Calculate</a
                     >
+
+                    <!-- Player Total Expenses -->
+                    <p class="mt-4">
+                      Player Expenses: $<span id="player-total-expenses"></span>
+                    </p>
+
+                    <!-- Manager  -->
+                    <div class="row d-flex align-items-center my-3">
+                      <div class="col-4">
+                        <label for="inputPassword2">Manager:</label>
+                      </div>
+                      <div class="col-8">
+                        <input
+                          type="number"
+                          id="manager-expense"
+                          class="form-control"
+                          placeholder="Manager's expense"
+                          min="0"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Coach -->
+                    <div class="row d-flex align-items-center my-3">
+                      <div class="col-4">
+                        <label for="inputPassword2">Coach:</label>
+                      </div>
+                      <div class="col-8">
+                        <input
+                          type="number"
+                          id="coach-expense"
+                          class="form-control"
+                          placeholder="Coach's expense"
+                          min="0"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Calculate Total Button -->
+                    <a
+                      href="#"
+                      id="calculate-total"
+                      class="btn btn-primary d-block"
+                      >Calculate Total</a
+                    >
+
+                    <!-- Total -->
+                    <div class="d-flex justify-content-between mt-3">
+                      <p>Total</p>
+                      <p class="text-warning">$ <span id="total"> </span></p>
+                    </div>
                   </div>
                 </div>
               </div>

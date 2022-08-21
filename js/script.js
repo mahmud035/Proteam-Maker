@@ -35,6 +35,12 @@ function getInputFieldValueById(inputId) {
   return inputValue;
 }
 
+function getElementValueById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementValue = parseFloat(element.innerText);
+  return elementValue;
+}
+
 function setElementValueById(elementId, value) {
   const element = document.getElementById(elementId);
   element.innerText = value;
@@ -47,4 +53,14 @@ document.getElementById('player-expenses').addEventListener('click', () => {
 
   const playersTotalExpense = perPlayerExpense * numberOfPlayers;
   setElementValueById('player-total-expenses', playersTotalExpense);
+});
+
+// Add event listener to calculate total button
+document.getElementById('calculate-total').addEventListener('click', () => {
+  const playersTotalExpense = getElementValueById('player-total-expenses');
+  const managerExpense = getInputFieldValueById('manager-expense');
+  const coachExpense = getInputFieldValueById('coach-expense');
+
+  const totalExpense = playersTotalExpense + managerExpense + coachExpense;
+  setElementValueById('total', totalExpense);
 });
