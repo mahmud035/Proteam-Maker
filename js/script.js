@@ -61,6 +61,17 @@ document.getElementById('player-expenses').addEventListener('click', () => {
   const perPlayerExpense = getInputFieldValueById('player-expense');
   const numberOfPlayers = players.length;
 
+  if (numberOfPlayers === 0) {
+    alert('Please select at least one player');
+    return;
+  }
+
+  // check if perPlayerExpenses is less than 0 or not a number
+  if (perPlayerExpense <= 0 || isNaN(perPlayerExpense)) {
+    alert('Please enter valid expense');
+    return;
+  }
+
   const playersTotalExpense = perPlayerExpense * numberOfPlayers;
   setElementValueById('player-total-expenses', playersTotalExpense);
 });
@@ -70,6 +81,17 @@ document.getElementById('calculate-total').addEventListener('click', () => {
   const playersTotalExpense = getElementValueById('player-total-expenses');
   const managerExpense = getInputFieldValueById('manager-expense');
   const coachExpense = getInputFieldValueById('coach-expense');
+
+  // check if any of the expenses is less than 0 or not a number
+  if (
+    managerExpense <= 0 ||
+    isNaN(managerExpense) ||
+    coachExpense <= 0 ||
+    isNaN(coachExpense)
+  ) {
+    alert('Please enter valid expense');
+    return;
+  }
 
   const totalExpense = playersTotalExpense + managerExpense + coachExpense;
   setElementValueById('total', totalExpense);
