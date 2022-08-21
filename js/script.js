@@ -21,7 +21,7 @@ function addToCart(element) {
   displayPlayerName(players);
   // disabled button
   element.setAttribute('disabled', true);
-  element.style.backgroundColor = 'green';
+  element.style.backgroundColor = 'gray';
 }
 
 function displayPlayerName() {
