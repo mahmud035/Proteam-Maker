@@ -28,3 +28,23 @@ function displayPlayerName() {
     playerNameContainer.appendChild(li);
   }
 }
+
+function getInputFieldValueById(inputId) {
+  const inputField = document.getElementById(inputId);
+  const inputValue = parseFloat(inputField.value);
+  return inputValue;
+}
+
+function setElementValueById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
+}
+
+// Add event listener to calculate button
+document.getElementById('player-expenses').addEventListener('click', () => {
+  const perPlayerExpense = getInputFieldValueById('player-expense');
+  const numberOfPlayers = players.length;
+
+  const playersTotalExpense = perPlayerExpense * numberOfPlayers;
+  setElementValueById('player-total-expenses', playersTotalExpense);
+});

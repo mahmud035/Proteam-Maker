@@ -161,15 +161,53 @@
             <!-- Selected Player -->
             <div class="row">
               <div class="col">
-                <h5 class="text-center mb-5 text-decoration-underline">
-                  SELECTED - V
-                </h5>
-                <ol id="selected-player-container"></ol>
+                <div class="card">
+                  <h5 class="text-center my-5 text-decoration-underline">
+                    SELECTED - V
+                  </h5>
+                  <ol id="selected-player-container"></ol>
+                </div>
               </div>
             </div>
             <!-- Budget -->
-            <div class="row">
-              <div class="col"></div>
+            <div class="row mt-5">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center text-decoration-underline"
+                    >
+                      Budget
+                    </h5>
+                    <!-- Per Player Expense -->
+                    <div class="row d-flex align-items-center my-4">
+                      <div class="col-4">
+                        <label for="inputPassword2">Per Player</label>
+                      </div>
+                      <div class="col-8">
+                        <input
+                          type="number"
+                          id="player-expense"
+                          class="form-control"
+                          placeholder="Per player expense"
+                        />
+                      </div>
+                    </div>
+                    <!-- Player Total Expenses -->
+                    <p>
+                      Player Expenses: $<span id="player-total-expenses"></span>
+                    </p>
+
+                    <!-- Calculate Button -->
+                    <a
+                      href="#"
+                      id="player-expenses"
+                      class="btn btn-primary d-block"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
