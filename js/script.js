@@ -11,7 +11,17 @@ function addToCart(element) {
   };
 
   players.push(playerObject);
+
+  //  players should not be selected more than 5.
+  if (players.length > 5) {
+    alert('You can only select 5 players');
+    return;
+  }
+
   displayPlayerName(players);
+  // disabled button
+  element.setAttribute('disabled', true);
+  element.style.backgroundColor = 'green';
 }
 
 function displayPlayerName() {
