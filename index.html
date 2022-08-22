@@ -21,13 +21,15 @@
     <header
       class="py-5 d-flex flex-column justify-content-center align-items-center text-white"
     >
-      <h1 class="text-center display-1 fw-semibold">Proteam Maker</h1>
-      <p class="w-50 mx-auto text-center fw-semibold mt-4">
-        Proteam Maker is the best free Fantasy sports Prediction and Sports News
-        Provider. Our expertised Dream-5 Predictions helps sports lovers to play
-        wisely and win the matches. We also provide, all the sports news, Live
-        score, Players Biography, and far more.
-      </p>
+      <div class="pt-5">
+        <h1 class="text-center display-1 fw-bold pt-5">Proteam Maker</h1>
+        <p class="w-50 mx-auto text-center fw-semibold mt-4">
+          Proteam Maker is the best free Fantasy sports Prediction and Sports
+          News Provider. Our expertised Dream-5 Predictions helps sports lovers
+          to play wisely and win the matches. We also provide, all the sports
+          news, Live score, Players Biography, and far more.
+        </p>
+      </div>
     </header>
     <!-- Main Section -->
     <main>
@@ -227,10 +229,11 @@
 
                     <!-- Player Total Expenses -->
                     <p class="mt-4 fw-semibold">
-                      Player Expenses: <span class="text-warning">$</span
+                      Player Expenses: &nbsp;
+                      <span class="expense-amount-color">$</span
                       ><span
                         id="player-total-expenses"
-                        class="fw-bold text-warning"
+                        class="fw-bold expense-amount-color"
                       ></span>
                     </p>
 
@@ -279,7 +282,9 @@
                     <!-- Total -->
                     <div class="d-flex justify-content-between mt-3 fw-bold">
                       <p>Total</p>
-                      <p class="text-warning">$<span id="total"> </span></p>
+                      <p class="expense-amount-color">
+                        $<span id="total"> </span>
+                      </p>
                     </div>
                   </div>
                 </div>

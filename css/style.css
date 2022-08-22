@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 body {
-  /* background-color: #5737d6; */
   background-color: #2b4865;
   color: #fff;
 }
@@ -14,14 +15,12 @@ header {
 }
 
 header h1 {
-  color: #7a4495;
+  font-family: 'Berkshire Swash', cursive;
+  color: #ff5e19;
 }
 
 .card {
-  /* background-color: #1c3879; */
-  /* background-color: #5737d6; */
   background-color: #002b5b;
-  /* color: #fff; */
   border: none;
 }
 
@@ -30,4 +29,9 @@ header h1 {
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+p.expense-amount-color,
+span.expense-amount-color {
+  color: #ff9e75;
 }
