@@ -15,7 +15,7 @@ function addToCart(element) {
   //  players should not be selected more than 5.
   if (players.length > 5) {
     alert('You can only select 5 players');
-    players.pop();
+    players.pop(); // remove last player from array
     return;
   }
 
