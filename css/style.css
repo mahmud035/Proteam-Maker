@@ -1,3 +1,33 @@
+body {
+  /* background-color: #5737d6; */
+  background-color: #2b4865;
+  color: #fff;
+}
+
 header {
-  height: 60vh;
+  min-height: 100vh;
+  background: url('../images/bg-image.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+
+header h1 {
+  color: #7a4495;
+}
+
+.card {
+  /* background-color: #1c3879; */
+  /* background-color: #5737d6; */
+  background-color: #002b5b;
+  /* color: #fff; */
+  border: none;
+}
+
+.btn-background {
+  background-color: #256d85;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

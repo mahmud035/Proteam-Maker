@@ -15,13 +15,14 @@ function addToCart(element) {
   //  players should not be selected more than 5.
   if (players.length > 5) {
     alert('You can only select 5 players');
+    players.pop();
     return;
   }
 
   displayPlayerName(players);
   // disabled button
   element.setAttribute('disabled', true);
-  element.style.backgroundColor = 'gray';
+  element.style.backgroundColor = '#607EAA';
 }
 
 function displayPlayerName() {

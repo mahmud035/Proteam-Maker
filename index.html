@@ -18,7 +18,9 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="my-5 py-5">
+    <header
+      class="py-5 d-flex flex-column justify-content-center align-items-center text-white"
+    >
       <h1 class="text-center display-1 fw-semibold">Proteam Maker</h1>
       <p class="w-50 mx-auto text-center fw-semibold mt-4">
         Proteam Maker is the best free Fantasy sports Prediction and Sports News
@@ -43,14 +45,14 @@
                     alt="..."
                   />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Lionel Messi</h5>
+                    <h5 class="card-title fw-bold">Lionel Messi</h5>
                     <p class="card-text">
                       36 Goals &nbsp; &nbsp; . &nbsp; &nbsp; 120 Assist
                     </p>
                     <button
                       href="#"
                       onclick="addToCart(this)"
-                      class="btn btn-primary d-block w-100"
+                      class="btn btn-background d-block w-100"
                     >
                       SELECT
                     </button>
@@ -66,14 +68,14 @@
                     alt="..."
                   />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Neymar Jr</h5>
+                    <h5 class="card-title fw-bold">Neymar Jr</h5>
                     <p class="card-text">
                       36 Goals &nbsp; &nbsp; . &nbsp; &nbsp; 120 Assist
                     </p>
                     <button
                       href="#"
                       onclick="addToCart(this)"
-                      class="btn btn-primary d-block w-100"
+                      class="btn btn-background d-block w-100"
                     >
                       SELECT
                     </button>
@@ -89,14 +91,14 @@
                     alt="..."
                   />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Kylian Mbappé</h5>
+                    <h5 class="card-title fw-bold">Kylian Mbappé</h5>
                     <p class="card-text">
                       36 Goals &nbsp; &nbsp; . &nbsp; &nbsp; 120 Assist
                     </p>
                     <button
                       href="#"
                       onclick="addToCart(this)"
-                      class="btn btn-primary d-block w-100"
+                      class="btn btn-background d-block w-100"
                     >
                       SELECT
                     </button>
@@ -112,14 +114,14 @@
                     alt="..."
                   />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Vítor Machado</h5>
+                    <h5 class="card-title fw-bold">Vítor Machado</h5>
                     <p class="card-text">
                       36 Goals &nbsp; &nbsp; . &nbsp; &nbsp; 120 Assist
                     </p>
                     <button
                       href="#"
                       onclick="addToCart(this)"
-                      class="btn btn-primary d-block w-100"
+                      class="btn btn-background d-block w-100"
                     >
                       SELECT
                     </button>
@@ -135,14 +137,14 @@
                     alt="..."
                   />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Sergio Ramos</h5>
+                    <h5 class="card-title fw-bold">Sergio Ramos</h5>
                     <p class="card-text">
                       36 Goals &nbsp; &nbsp; . &nbsp; &nbsp; 120 Assist
                     </p>
                     <button
                       href="#"
                       onclick="addToCart(this)"
-                      class="btn btn-primary d-block w-100"
+                      class="btn btn-background d-block w-100"
                     >
                       SELECT
                     </button>
@@ -158,14 +160,14 @@
                     alt="..."
                   />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Renato Sanches</h5>
+                    <h5 class="card-title fw-bold">Renato Sanches</h5>
                     <p class="card-text">
                       36 Goals &nbsp; &nbsp; . &nbsp; &nbsp; 120 Assist
                     </p>
                     <button
                       href="#"
                       onclick="addToCart(this)"
-                      class="btn btn-primary d-block w-100"
+                      class="btn btn-background d-block w-100"
                     >
                       SELECT
                     </button>
@@ -200,10 +202,10 @@
                     </h5>
                     <!-- Per Player Expense -->
                     <div class="row d-flex align-items-center my-3">
-                      <div class="col-4">
-                        <label for="inputPassword2">Per Player:</label>
+                      <div class="col-5 fw-semibold">
+                        <label>Per Player:</label>
                       </div>
-                      <div class="col-8">
+                      <div class="col-7">
                         <input
                           type="number"
                           id="player-expense"
@@ -219,21 +221,25 @@
                     <a
                       href="#"
                       id="player-expenses"
-                      class="btn btn-primary d-block"
+                      class="btn btn-background d-block"
                       >Calculate</a
                     >
 
                     <!-- Player Total Expenses -->
-                    <p class="mt-4">
-                      Player Expenses: $<span id="player-total-expenses"></span>
+                    <p class="mt-4 fw-semibold">
+                      Player Expenses: <span class="text-warning">$</span
+                      ><span
+                        id="player-total-expenses"
+                        class="fw-bold text-warning"
+                      ></span>
                     </p>
 
                     <!-- Manager  -->
                     <div class="row d-flex align-items-center my-3">
-                      <div class="col-4">
-                        <label for="inputPassword2">Manager:</label>
+                      <div class="col-5 fw-semibold">
+                        <label>Manager:</label>
                       </div>
-                      <div class="col-8">
+                      <div class="col-7">
                         <input
                           type="number"
                           id="manager-expense"
@@ -247,10 +253,10 @@
 
                     <!-- Coach -->
                     <div class="row d-flex align-items-center my-3">
-                      <div class="col-4">
-                        <label for="inputPassword2">Coach:</label>
+                      <div class="col-5 fw-semibold">
+                        <label>Coach:</label>
                       </div>
-                      <div class="col-8">
+                      <div class="col-7">
                         <input
                           type="number"
                           id="coach-expense"
@@ -266,14 +272,14 @@
                     <a
                       href="#"
                       id="calculate-total"
-                      class="btn btn-primary d-block"
+                      class="btn btn-background d-block"
                       >Calculate Total</a
                     >
 
                     <!-- Total -->
-                    <div class="d-flex justify-content-between mt-3">
+                    <div class="d-flex justify-content-between mt-3 fw-bold">
                       <p>Total</p>
-                      <p class="text-warning">$ <span id="total"> </span></p>
+                      <p class="text-warning">$<span id="total"> </span></p>
                     </div>
                   </div>
                 </div>
